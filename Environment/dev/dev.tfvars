@@ -68,7 +68,7 @@ aks_clusters = {
 mssql_databases = {
   mssqldb1 = {
     name             = "dev-mssql-db1"
-    mssql_server_key = "mssqlserver1"  # key from mssql_servers map
+    mssql_server_key = "mssqlserver1" # key from mssql_servers map
     max_size_gb      = 2
     sku_name         = "Basic"
   }
