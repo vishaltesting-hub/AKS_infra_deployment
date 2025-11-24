@@ -22,7 +22,10 @@ env:
 
 jobs:
   terraform-CI:
-    runs-on: self-hosted
+    # runs-on: self-hosted
+
+    runs-on: ubuntu-latest
+
     steps: 
       - name: Checkout
         uses: actions/checkout@v5.0.0
@@ -57,10 +60,13 @@ jobs:
         working-directory: ${{ env.WORKING_DIR }}   
         
   terraform-apply:    
-    runs-on: self-hosted
+    # runs-on: self-hosted
+
+    runs-on: ubuntu-latest
+
     if: github.ref == 'refs/heads/main'
     needs: terraform-CI
-    
+
     steps:
       - name: Checkout
         uses: actions/checkout@v5.0.0
